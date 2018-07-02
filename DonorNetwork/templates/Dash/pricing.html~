@@ -1,0 +1,4 @@
+<!DOCTYPE html>
+
+{% extends "Dash/base.html" %}
+

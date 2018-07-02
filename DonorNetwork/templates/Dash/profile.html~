@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+{% extends 'Dash/base.html' %}
+
+{% block title %}Profile{% endblock %}
+
+{% block body_block %}
+<div class="hero-unit">
+  <h1> Profile <h1>
+      {% if user.username %}
+      <p>Username: {{ user.username }}</p>
+      {% endif %}
+
+      {% if userprofile %}
+      <p>Website: <a href="{{ userprofile.website }}">{{ userprofile.website }}</a></p>
+      {% if userprofile.picture %}
+      <img src="{{ userprofile.picture.url }}"  />
+      {% endif %}
+      {% endif %}
+
+      <a href="/accounts/logout">Logout</a>
+
+	    
+	    
+</div>
+{% endblock %}

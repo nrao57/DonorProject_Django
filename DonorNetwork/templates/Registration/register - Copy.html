@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+{% extends "Dash/base.html" %}
+
+{% block title  %}Registration{% endblock %}
+
+{% block body_block %}
+
+        <h1>Register with DonorDashboard</h1>
+
+        {% if user.is_authenticated %}
+        DonorDash says: <strong>thank you for registering!</strong>
+        <a href="/Dash/">Return to the homepage.</a>
+        {% else %}
+	<p>
+        <strong></strong>
+	</p>
+      <form method="POST" action="{% url 'register' %}"}>
+        {% csrf_token %}
+        {{form.as_p}}
+	<!--{{profile_form.as_p}}-->
+        <input type="submit" value="Submit">
+      </form>
+        {% endif %}
+
+
+{% endblock %}

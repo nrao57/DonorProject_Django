@@ -1,0 +1,11 @@
+#These are functions that add shortcuts to the view.py
+from django.contrib.auth.models import User
+
+def safe_get(reqwuser):
+    dict_out = {}
+    try:
+        dict_out['user'] = User.objects.get(username=reqwuser.user)
+    except:
+        dict_out['user']=None
+
+    return dict_out

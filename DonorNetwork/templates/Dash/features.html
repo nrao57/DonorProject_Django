@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+{% extends "Dash/base.html" %}
+
+{% load staticfiles %}
+
+{% block title %}Features{% endblock %}
+
+
+{% block body_block %}
+<!--Body Content for Page-->
+<!--Main Picture slider-->
+    <main role="main">
+
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="first-slide" src="{% static "assets/dreamstime_1500.jpg" %}"
+            <div class="container">
+              <div class="carousel-caption text-left">
+                <h1>Build Beautiful Dashboards Quickly.</h1>
+                <p>ZoomDonor is an easy to use customizable one-page dashboard builder for building simple and beautiful
+				visuallizations to help understand your donation and fundraising data. Upload your data, create a 
+				campaign, and customize your own dashboard to make it your own.</p>
+                <p><a class="btn btn-lg btn-primary" href="logins/register.html" role="button">Sign up today</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Marketing messaging and featurettes
+      ================================================== -->
+      <!-- Wrap the rest of the page in another container to center all the content. -->
+
+      <div class="container marketing">
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="{% static "assets/speedometer_140.jpg" %}" alt="Generic placeholder image" width="140" height="140">
+            <h2>Fast</h2>
+            <p>Build beautiful dashboards within minutes. Not hours.</p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="{% static "assets/clouds_140.jpg" %}" alt="Generic placeholder image" width="140" height="140">
+            <h2>Cloud Managed</h2>
+            <p>Implement solution without worrying about big infrastructure. The cloud scales with you.</p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="{% static "assets/lock_140.jpg" %}" alt="Generic placeholder image" width="140" height="140">
+            <h2>Secure</h2>
+            <p>All data uploaded and dashboards you create are located in secure cloud infrastructure.</p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+
+
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">Really Fast and Intuitive. <span class="text-muted">It'll blow your mind.</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          </div>
+          <div class="col-md-5">
+            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" src="{% static "assets/network_500.jpg" %}" alt="Generic placeholder image">
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">Easily Scale with the cloud.<span class="text-muted"> Oh yeah, it's that good.</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          </div>
+          <div class="col-md-5 order-md-1">
+            <img class="featurette-image img-fluid mx-auto" src="{% static "assets/ipad_500.jpg" %}" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">And lastly, Security. <span class="text-muted">Checkmate.</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          </div>
+          <div class="col-md-5">
+            <img class="featurette-image img-fluid mx-auto" src="{% static "assets/security_500.jpg" %}" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- /END THE FEATURETTES -->
+
+      </div>
+
+{% endblock %}

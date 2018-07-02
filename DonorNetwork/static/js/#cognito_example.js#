@@ -1,0 +1,38 @@
+//javasript file for amazon cognito
+
+<script src="{% static 'js/amazon-cognito-auth.min.js' %}"></script>
+
+
+/*
+  TokenScopesArray
+  Valid values are found under:
+  AWS Console -> User Pools -> <Your user pool> -> App Integration -> App client settings
+  Example values: ['profile', 'email', 'openid', 'aws.cognito.signin.user.admin', 'phone']
+
+  RedirectUriSignOut 
+  This value must match the value specified under:
+  AWS Console -> User Pools -> <Your user pool> -> App Integration -> App client settings -> Sign out URL(s)
+*/
+var authData = {
+	ClientId : '<TODO: add ClientId>', // Your client id here
+	AppWebDomain : '<TODO: add App Web Domain>',
+	TokenScopesArray : ['<TODO: add scope array>'], // e.g.['phone', 'email', 'profile','openid', 'aws.cognito.signin.user.admin'],
+	RedirectUriSignIn : '<TODO: add redirect url when signed in>',
+	RedirectUriSignOut : '<TODO: add redirect url when signed out>',
+	IdentityProvider : '<TODO: add identity provider you want to specify>', // e.g. 'Facebook',
+	UserPoolId : '<TODO: add UserPoolId>', // Your user pool id here
+	AdvancedSecurityDataCollectionFlag : '<TODO: boolean value indicating whether you want to enable advanced security data collection>', // e.g. true
+};
+var auth = new AmazonCognitoIdentity.CognitoAuth(authData);
+
+
+
+auth.userhandler = {
+	onSuccess: function(result) {
+		alert("Sign in success");
+		showSignedIn(result);
+	},
+	onFailure: function(err) {
+		alert("Error!");
+	}
+};
